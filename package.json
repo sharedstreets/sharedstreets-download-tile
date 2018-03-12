@@ -1,0 +1,50 @@
+{
+  "name": "sharedstreets-api",
+  "version": "0.1.0",
+  "description": "SharedStreets API",
+  "main": "index",
+  "files": [
+    "index.js",
+    "index.ts",
+    "bin"
+  ],
+  "scripts": {
+    "pretest": "tsc",
+    "test": "tap test.js",
+    "posttest": "tslint index.ts --project tsconfig.json",
+    "docs": "tsc && documentation readme index.js --section=API"
+  },
+  "bin": {
+    "sharedstreets-download-tile": "bin/sharedstreets-download-tile.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharedstreets/sharedstreets-api.git"
+  },
+  "keywords": [
+    "SharedStreets",
+    "API",
+    "Tile",
+    "Downloader"
+  ],
+  "author": "Denis Carriere <@DenisCarriere>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sharedstreets/sharedstreets-api/issues"
+  },
+  "homepage": "https://github.com/sharedstreets/sharedstreets-api#readme",
+  "devDependencies": {
+    "@types/meow": "*",
+    "@types/tape": "*",
+    "documentation": "*",
+    "tap": "*",
+    "tape": "*",
+    "tslint": "*",
+    "typescript": "*"
+  },
+  "dependencies": {
+    "axios": "*",
+    "meow": "*",
+    "sharedstreets-pbf": "*"
+  }
+}
