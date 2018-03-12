@@ -13,6 +13,13 @@ export type Output = "json" | "pbf";
  * @param {Object} [options={}] Optional parameter
  * @param {string} [options.output="pbf"] Output (json|pbf)
  * @returns {Promise<Buffer>} PBF Buffer
+ * @example
+ * const tile = [1186, 1466, 12];
+ * const layer = "geometry";
+ *
+ * sharedstreetsApi.downloadTile(tile, layer).then(data => {
+ *   data // => PBF Buffer
+ * })
  */
 export function downloadTile(tile: Tile, layer: Layer, options: {
   output?: Output,

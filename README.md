@@ -60,4 +60,15 @@ Download Tile
 -   `options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Optional parameter (optional, default `{}`)
     -   `options.output` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Output (json|pbf) (optional, default `"pbf"`)
 
+**Examples**
+
+```javascript
+const tile = [1186, 1466, 12];
+const layer = "geometry";
+
+sharedstreetsApi.downloadTile(tile, layer).then(data => {
+  data // => PBF Buffer
+})
+```
+
 Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Buffer](https://nodejs.org/api/buffer.html)>** PBF Buffer
