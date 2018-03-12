@@ -1,7 +1,7 @@
 # SharedStreets API
 
-[![npm version](https://badge.fury.io/js/sharedstreets-pbf.svg)](https://badge.fury.io/js/sharedstreets-pbf)
-[![Build Status](https://travis-ci.org/sharedstreets/sharedstreets-pbf.svg?branch=master)](https://travis-ci.org/sharedstreets/sharedstreets-pbf)
+[![npm version](https://badge.fury.io/js/sharedstreets-api.svg)](https://badge.fury.io/js/sharedstreets-api)
+[![Build Status](https://travis-ci.org/sharedstreets/sharedstreets-api.svg?branch=master)](https://travis-ci.org/sharedstreets/sharedstreets-api)
 
 Interact directly with SharedStreet's API.
 
