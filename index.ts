@@ -4,6 +4,8 @@ import * as sharedstreetsPbf from "sharedstreets-pbf";
 export type Tile = number[];
 export type Layer = "geometry" | "intersection" | "metadata" | "reference";
 export type Output = "json" | "pbf";
+export type Extensions = "pbf";
+export type Protocols = "https" | "http";
 
 /**
  * Download Tile
@@ -12,6 +14,9 @@ export type Output = "json" | "pbf";
  * @param {string} layer Layer (geometry|intersection|metadata|reference)
  * @param {Object} [options={}] Optional parameter
  * @param {string} [options.output="pbf"] Output (json|pbf)
+ * @param {string} [options.protocol="https"] Protocol (https|http)
+ * @param {string} [options.domain="tiles.sharedstreets.io"] Domain
+ * @param {string} [options.extension="pbf"] Extension
  * @returns {Promise<Buffer>} PBF Buffer
  * @example
  * const tile = [1186, 1466, 12];
@@ -23,11 +28,17 @@ export type Output = "json" | "pbf";
  */
 export function downloadTile(tile: Tile, layer: Layer, options: {
   output?: Output,
+  protocol?: Protocols,
+  domain?: string,
+  extension?: Extensions,
 } = {}) {
   // Default parameters
-  options.output = options.output || "pbf";
+  const output = options.output || "pbf";
+  const protocol = options.protocol || "https";
+  const domain = options.domain || "tiles.sharedstreets.io";
+  const extension = options.extension || "pbf";
   const [x, y, z] = tile;
-  const url = `https://tiles.sharedstreets.io/${z}-${x}-${y}.${layer}.pbf`;
+  const url = `${protocol}://${domain}/${z}-${x}-${y}.${layer}.${extension}`;
 
   // Perform HTTP connection to SharedStreets API Server
   return axios.get(url).then((response) => {
