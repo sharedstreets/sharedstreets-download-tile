@@ -1,6 +1,6 @@
 # Changelog
 
-## 2018-03-21 - 0.2.0
+## 2018-03-21 - 0.3.0
 
 - Add extra options to deconstruct tile URL:
   - protocol
