@@ -1,9 +1,9 @@
-# SharedStreets API
+# SharedStreets Tile Downloader (JavaScript)
 
 [![npm version](https://badge.fury.io/js/sharedstreets-api.svg)](https://badge.fury.io/js/sharedstreets-api)
 [![Build Status](https://travis-ci.org/sharedstreets/sharedstreets-api.svg?branch=master)](https://travis-ci.org/sharedstreets/sharedstreets-api)
 
-Interact directly with SharedStreet's API.
+Interact directly with SharedStreet's tile API.
 
 ## Install
 
